@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
+
+
+<form action="/" method ="get">
+    <label> <h1> Please Select a Food Truck </h1>
+    </label>
+    <br>
+    <select name = "foodtruck_name">
+      <option selected="selected">Please select ...</option>
+      <option value="The Farm Box"> The Farm Box </option>
+      <option value="Old World"> Old World </option>
+      <option value="Bubba Bing"> Bubba Bing </option>
+      <option value="NY Delhi"> NY Delhi </option>
+      <option value="Mobile Masala"> Mobile Masala </option>
+      <option value="El Cubanito"> El Cubanito </option>
+      <option value="Ghee on The Go"> Ghee on The Go </option>
+      <option value="Adobo A-gogo"> Adobo A-gogo </option>
+      <option value="Casera"> Casera </option>
+      <option value="County Line"> County Line </option>
+      <option value="Jalan Jalan"> Jalan Jalan </option>
+      <option value="Mise En Place"> Mise En Place </option>
+      <option value="Koko's"> Koko's </option>
+      <option value="Miko Miko"> Miko Miko </option>
+      <option value="Taco Titans"> Taco Titans </option>
+      <option value="Coffee Truck"> Coffee Truck </option>
+      <option value="319"> 319  </option>
+      <option value="320"> 320 </option>
+      <option value="321"> 321 </option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" value="Submit">  
+</form>
+
+{% endblock %}

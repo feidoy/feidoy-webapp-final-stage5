@@ -1,0 +1,249 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
+<div class="section"> <!-- Section 3 -->
+  <div class="lesson"> 
+    <h2>
+      Alex's Section 3: Obejct Oriented Programming
+    </h2>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+          Classes:
+        </div>
+          <div class="text">
+            <p>
+              Classes are like blueprints! The __init__() function creates space in our computer's working memory for instances of the class Turtle. In the example below, we are defining brad and britt, which are both instances of the class Turtle: 
+              <br>
+              <br>
+
+              alex = turtle.Turtle 
+              <br>
+              alexis = turtle.Turtle 
+              <br>
+              <br>
+
+              So the class, Turtle, is like a basic blueprint within the module turtle that can be used to create multiple instances of the class.
+              <br>
+              <br>
+            </p>
+            <p>
+              An important thing to remember when using turtle is that the classes Turtle (turtle.Turtle) or Screen (turtle.Screen) must be capitalized
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+          Creating CLasses:
+        </div>
+          <div class="text">
+            <p>
+              Why create a class? 
+              Although many things are defined within the PSL, specifics aspects of a program that you want to create will not be covered and you have to create classes for yourself. Maybe you want to be able to call, see or in other ways use many different objects that are all of the same type. Like in the movie example, where we all know what a movie is and that many different movies exist. 
+            </p>
+            <p>
+
+              So what should you think about when creating a class? 
+              What aspects of the class are things that all instances of the class have in common, and which of these would it be useful to be aware of, so that we can use them when creating instances of the class? 
+              Again, if we take the movie example, all movies(as far as I know) have a title, a storyline, a trailer, a poster etc. All of these are things that we may want to use for every instance of the class movie, but we don't want to waste time, space and common sense by re-creating all the aspects of a movie every time we define a new movie.
+              </p>
+              <p> 
+              Creating the class 
+              <br>
+              <br>
+              When creating the class, we use the Python keyword class, like this: 
+              <br>
+              <br>
+
+              class Name_of_class(): 
+              <br>
+              <br>
+
+              This is followed by def __init__(), also known as the constructor, although not everyone agrees upon this(see above). 
+              <br><br>
+
+              __init__() uses some terms, i.e. __init__(self, a, b, c, etc). More specifically: <br><br>
+
+              self: this is for the object being created, so it points to the instance being created. In the movie example, this instance could be Star Wars, Toy Story or any other movie that we choose to create an instance for. <br><br>
+
+              a, b, c, etc: are instance variables needed for the specific class we are creating. In a Food Truck example we have a Food Truck Name, a Food Truck Menu, and a Food Truck License Plate. These should have corresponding names, such as truck_name, truck_menu, truck_license etc, rather than having ambiguous names like a, b and c. <br><br>
+
+              So if we want to create the class FoodTruck, and want to let it have the three instance variables above, we do it like this: <br><br>
+
+              class Movie():     def __init__(self, truck_name, truck_menu, truck_license): 
+                      self.truckname = truck_name 
+                      self.menu = truck_menu 
+                      self.license = truck_license 
+               
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+          Definitions from http://template-1077.appspot.com/#lesson-XIII-iii:
+        </div>
+          <div class="text">
+            <p>
+              Module
+              <br>
+              <br>
+              A module is a file containing Python definitions and statements, essentially a Python program. The file is saved as a Python file, ending in .py. 
+              Modules and the functions defined in a module can be imported into other modules and be used there.<br>
+              <br> 
+              In the screenshot below, media.py is a module and the module webbrowser has been imported into that module.
+              <br>
+              <br>              
+              <li> Here is a sample structure of a CLASS: <img src="http://s23.postimg.org/tlvgsbiqz/Screen_Shot_2014_04_18_at_4_52_12_PM.png"> </a> </li>
+            </p>            
+
+              There are numerous built-in modules that can be used for many different things.
+            <p>
+              Objects
+              <br>
+              <br>
+              An object is a structure containing data (attributes) and coding functions (methods) that can use and manipulate the data. Objects can call, use and manipulate each other.
+            </p>
+            <p>
+              Class
+              <br>
+              <br>
+              Classes are a kind of blueprint that contain data and functions that control behaviour. They can be used to create multiple instances with different names but the same basic properties. In the screenshot, Movie is a class while Toy_Story and Avatar are instances of the class.  Class vs Instance: A 'Class' is like a blueprint for a building while an 'instance' is like an ACTUAL building that was made from the blueprint.
+            </p>
+            <p>
+              Method
+              <br>
+              <br>
+              A method is a procedure, that does something inside a class or instance.
+              <br>
+              An example is the procedure that opens a browser window, as seen in the screenshot above. see Instance Method below.
+              <br>
+              The def __init__ that constructs/initiates the class is also a method.
+            </p>
+            <p>
+              Constructor
+              <br>
+              <br>
+              A constructor is a method, used to initiate and create memory for an object. The object being a new instance of a class. 
+              <br>
+              <br>
+              See more on the __init__ in Creating Classes further up in the notes.
+            </p>
+            <p>
+              self
+              <br>
+              <br>
+              Self is the fixed parameter in a class constructor that points to the class object being created.
+              <br>
+              <br>
+              So if I have a class Movie, as seen above, self points to an instance of that class, wheter its Toy_Story or Avatar.
+            </p>
+            <p>
+              Instances
+              <br>
+              <br>
+              An instance is an object created using a class. The instance uses the properties and methods of the class, but can also have unique properties of it's own. 
+              <br><br>
+            </p>
+            <p>
+              Instance Variables
+              <br>
+              <br>
+              Instance variables are variables defined within a class. These variables are used to define certain aspects of the of the class.
+              <br>
+              <br> 
+              The instance variables all point to self(mentioned above) and are probably, but not necessarily, unique for each instance.
+              <br>
+              <br> 
+              In the screenshot above, we can see that the instance variables tell us different things about Movie, like the title, storyline etc. And when we create Toy_Story or Avatar we define, and store in memory, the different values of the variables for each of these two instances.
+            </p>
+            <p>
+              Instance Methods
+              <br>
+              <br>
+              An instance method is a method within a class, used to enable each instance of the class to do the same thing. Much like instance variables, only with a specific function rather than just an integer or string value. Instance methods are special functions that belong to an 'instance' of a 'class.' They usually get or set information about the instance they are attached to.
+              <br>
+              <br> 
+              Again, the screenshot above gives us the webbrowser.open example, where this method can be used by both Toy_Story and Avatar, to open their trailer in a webbrowser.
+            </p>
+            <p>
+              Class Variables
+              <br>
+              <br>
+              A class variable is similar to an instance variable, in that it is shared by all instances of the class. BUT! It is defined outside any method's of the class. This means that it is an attribute of the class, but not an attribute of an instance of the class, compared to the instance variables above, where we can see that self.title and self.storyline are attributes of every instance of the class.
+              <br>
+              <br>
+              In other words, a class variable is almost not a variable for the instances of the class, since it will always be the same for all instances. If it is changed and get's a new value of some kind, this value will change for all instances of the class. But it is, of course, a variable, since it's value can be changed.
+              <br>
+              <br> 
+              Python has some pre-defined class variables or class attributes, one of them being __doc__. This can be used to supply some kind of documentation for the class you have created, so that potential users can see what it does, quickly and easily. Adding a __doc__ class variable to your class can be done like this:
+              <br>
+              <br>
+              class Nothing_special(object): 
+              <br>
+              <br>
+              """This class does nothing special""" 
+              <br>
+              <br>
+              Other pre-defined class variables are __name__, __dict__, __bases__ and __module__.
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         Comments (#):
+        </div>
+          <div class="text">
+            <p>
+              For comments, use hashtag #. 
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         Expressions:
+        </div>
+          <div class="text">
+            <p>     
+            Expressions 
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         Data Types:
+        </div>
+          <div class="text">
+            <p>     
+            A data type is a category for values.
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         Assignment Statements:
+        </div>
+          <div class="text">
+            <p>     
+            Assignment Statments are 
+            <br>
+            <br>
+            Office = Stapler 
+            <br>
+            # Its like placing an item (stapler) in a box and labeling the box (office)
+            </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+<div class="section"> <!-- Section 5 -->
+  <div class="lesson"> 
+    <h2>
+      Alex's Section 5 Notes: Choose Your Next Steps
+    </h2>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+          JavaScript
+        </div>
+          <div class="text">
+            <p>
+              JavaScript gives us a way of saving data in the form of variables.
+				## creating variables in Javascript.  Arrays, functions, and objects use the "var" syntax.<br><br>
+
+				## To declare a new variable you begin with the keyword var, regardless of the data type your saving<br>
+				var {{variableName}} = {{someValue}};<br>
+				var firstname = "james";<br><br>
+				<br>
+				var age = 32;
+				<br>
+				console.log(firstname);
+				<br>
+				## The browser opens up a script with console.log in it. It'll print whatever information it receives to the browser console.It's a useful trick for debugging code. <br><br>
+              
+            </p>
+            <p>
+              Truthy / Falsy<br><br>
+
+				Truthy<br>
+				---------
+				True<br>
+				Non-zero numbers<br>
+				"strings" - length with at least 1.<br>
+				objects<br>
+				arrays<br>
+				functions<br>
+				(all evaluate to true.)<br>
+				<br><br><br>
+
+				Falsy<br>
+				---------
+				false<br>
+				0<br>
+				"" - empty strings<br>
+				undefined - means variable doesn't exist, and interpreterdoesn't know what you are referring too.<br>
+				null - variable exists but has no value, used as a placeholder.<br>
+				NaN - not a number<br>
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         JSON - Javascript Object Notation
+        </div>
+          <div class="text">
+            <p>
+              <b>Javascript Object Notation</b>
+				JSON is Handy for expressing objects. <br><br>
+				Anything you express in xml you can express in JSON.  Its a little less verbose because you don't need extras tags used in XML. <br><br>
+
+				*** JSON is built on two structures:<br><br>
+
+				A collection of name/value pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or associative array.<br><br>
+				An ordered list of values. In most languages, this is realized as an array, vector, list, or sequence.<br><br>
+
+				Build things up with dictionaries with key and values pairs. 
+				{"key":"value"}
+
+				also can use lists with values.  [1,12,"three"]  List can be value in hashtable
+				List can be item in a list.
+				You can have integers, strings, boolean, or float, also null     
+
+			</p>
+			<p>	#### code in python to activate json library ###
+
+				import json<br><br>
+
+				j = '{'one':1, "numbers":[1,2,3.5]}'<br>
+				# store dictionary in j variable.<br><br>
+
+				# this loads the json<br>
+				d = json.loads(j) <br><br>
+
+				>>> d['numbers']<br>
+				[1, 2, 3.5] <br><br>
+
+
+				never use 'eval' to parse json. there could be malicious code built within.
+
+				jsonlint.com -  JSON Lint is a web based validator and reformatter for JSON, a lightweight data-interchange format.
+
+				*** http://www.json.org/  -  Introduction to JSON
+            </p>
+          </div>
+      </div>
+      
+       <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         APIs and HTTP - Making Requests
+        </div>
+          <div class="text">
+            <p>  APIs
+
+            	Application Programming Interface is using to communicate to other computers by using http and other protocols (such as json and xml).
+
+				With API's Users can make requests to a website server, and that website server will make request to other server(s) to that data.  We can create a webpage that allows users to request information from a webpage to grab info from another server through http and send that info back to the user in the html response .
+
+
+
+            </p>
+
+           	<p>     
+				Python Code To make http requests:<br><br>
+
+				URLLIB2<br>
+				URLLIB<br>
+
+				You can use urllib2 to make http requests to download a response<br>
+				urllib2.urlopen('INSERT URL HERE')<br><br>
+
+				import URLLIB2  # this imports the library<br><br>
+
+				p = urllib2.urlopen('http://www.google.com')  # stores the http requested url function into variable<br><br>
+
+				*.read reads back the response and sends back a wall of text.<br>
+				c = p.read()  # stores a call to the http url function and reads it, stored into variable c for easy recall <br><br>
+
+
+				use dir() to examine the object library.  This will list directory <br><br>
+
+				dictionaires have functions on them called items.
+				in python, you can use .items to view keys and values<br><br>
+
+				p.headers<br><br>
+
+				p.headers.items()<br>
+				           
+				            
+            </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+{% endblock %}
+

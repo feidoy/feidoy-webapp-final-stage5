@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h3>Hello Foodie! Please select your favorite restaurant recipes below!!  If you'd like to add a recipe, please select the input recipe Storage app link and fill out the form. </h3>
+  <!-- Insert table of pictures here -->
+  
+<form class="get_form" action="/" method ="get">
+    <label> <h1> Please Select a Restaurant </h1>
+    </label>
+    <br>
+    <select name = "foodtruck_name">
+      <option selected="selected">Please select ...</option>
+      <option value="The Farm Box"> The Farmer Box </option>
+      <option value="Old World"> Older World </option>
+      <option value="Bubba Bing"> Bubba Binger </option>
+      <option value="NY Delhi"> NYer Delhi </option>
+      <option value="Mobile Masala"> Mobiler Masala </option>
+      <option value="El Cubanito"> El Cubanator </option>
+      <option value="Ghee on The Go"> Gheer on The Goer </option>
+      <option value="Adobo A-gogo"> Adobo A-gogoer </option>
+      <option value="Casera"> Caseraera </option>
+      <option value="County Line"> County Liner </option>
+      <option value="Jalan Jalan"> Jalaner Jalaner </option>
+      <option value="Mise En Place"> Mise En Placer </option>
+      <option value="Koko's"> Kokoer's </option>
+      <option value="Miko Miko"> Mikor Mikor </option>
+      <option value="Taco Titans"> Taco Titaners </option>
+      <option value="Coffee Truck"> Coffee Trucker </option>
+      <option value="Khao and Chicken"> Khaoer and Chickener  </option>
+    </select>
+    <br>
+    <br>
+    <input type="submit" value="Submit">  
+</form>
+  <br>
+  <br>
+
+
+  <body>
+        <!-- for loop, iterate through query paramater from python script -->
+        {% for elements in query %}
+         
+            <table class = "menu_table" border ="3" cellpadding="5" cellspacing="5" bordercolor="black" bgcolor="#2196F3">
+              <caption> <b>Here's Your Foodtruck Dish Stats! </b> </caption>
+              <tr>  <th bgcolor="#2196F3">   </th>  </tr>
+              <tr> <th> Restaurant Name </th> </tr>
+              <tr> <td> {{ elements.truck_name  }} </td> </tr>
+            <br>
+            <br>
+              <tr> <th> Menu Item </th> </tr>
+              <tr> <td> {{ elements.recipe_name }}  </td> </tr>
+            <br>
+            <br>
+              <tr> <th> Service Type </th> </tr>
+              <tr> <td> {{ elements.service_type  }} </td> </tr>
+            <br>
+            <br>              
+              <tr> <th>   Ingredient List </pre>  </th> </tr>
+              <tr> <td> <pre> {{ elements.ingredient_list  }} </pre> </td> </tr>
+            <br>
+            <br>
+              <tr> <th> Allergens and Sub Ingredient List </th> </tr>
+              <tr> <td> <pre> {{ elements.allergens  }} </pre> </td> </tr>
+            <br>
+            <br>
+              <tr> <th> Picture </th> </tr>
+              <tr> <td><img src={{ elements.picture_link }} alt="picture" height="325" width="325"> </td> </tr>
+            <br>
+            <br>
+              <tr> <th> Document Link </th> </tr>
+              <tr> <td> <a target="blank " href="{{ elements.doc_link  }} "> Click Here to access menu doc </a> </td> </tr>
+            <br>
+            <br>
+              <tr> <th> <pre> Pack List </pre> </th> </tr>
+              <tr> <td> <a target="blank " href="{{ elements.pack_list  }} "> Click Here to access the Pack List doc </a> <br><br>
+               <pre> {{ elements.pack_list }}  </pre>  </td> </tr>
+            <br>
+            <br>
+              <tr> <th> <pre>  Plating Instructions - Portion Size  </pre> </th> </tr>
+              <tr> <td>  <pre>  {{ elements.plating  }}  </pre>  </td> </tr>
+            <br>
+            <br>
+              <tr> <th>   Chef's Dish Notes  </th> </tr>
+              <tr> <td> <pre> {{ elements.chef_notes  }} <pre> </td> </tr>
+            <br>
+            <br>
+            <tr>  <th bgcolor="#2196F3">   </th>  </tr>
+
+          </table>
+
+          <br>
+          {% endfor %}
+  </body>
+    <br>
+  
+
+{% endblock %}

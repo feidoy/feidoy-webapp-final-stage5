@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
+<div class="section"> <!-- Section 1 -->
+  <div class="lesson"> 
+    <h2>
+      Alex's Lesson 1 Notes
+    </h2>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+          HTML = Hyper Text Markup Language
+        </div>
+          <div class="text">
+            <p>
+              Html is the language of the web.  On The user end (with a browser) a request is sent to the internet, and communicates to a server through HTTP. The server sends back the HTML where the browser will interpret the HTML and display it on the web page.
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>  
+        <div class="lesson_title">
+          Tags
+        </div>
+          <div class="text">
+            <p>
+              HTML is made up of tags, and elements are complete from start of a tag, its string or contents, and the end of the tag. Tags that are "inline" keeps the text continuing on, including br.
+            <br>
+                Tags that are "blocks", place and invisible box around the contents that are inside them, like div and p tags.
+              </p>
+            </div>
+          </div>
+      </div>
+  <br>
+  <div class="lesson"> 
+     <h2>
+      Lesson 2 Notes + Creating a Structured Document
+     </h2>
+      <div class="lesson_box">
+        <br>
+          <div class="lesson_title">
+            CSS = Cascading Style Sheets.
+          </div> 
+          <div class="text">
+          <p>
+            CSS allows you to use syntax + rules to manipulate how elements look on a page. CSS is used to help style the page. <b>It's manipulation can include font sizes, image border sizes, colors, shapes, position,etc.</b>
+          </p>
+        </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+          <div class="lesson_title">
+            DOM
+          </div> 
+            <div class="text">
+              <p>
+              <b>Document Object Model </b>- This is a Standard convention for interacting with elements in HTML. These are elements in a tree type listing.
+              </p>
+            </div>
+      </div>
+      <div class="lesson_box">
+        <br>      
+        <div class="lesson_title">
+         Creating Structure
+        </div> 
+            <div class="text">
+            <p>
+              To create structure you can follow the tree method of by using DOM.  Browsers turn tags to elements in a tree form with DOM.  You can see the structures of these webpages through the developers tools (in Chrome).  There you can see the tree structure with arrows that expand each element.
+            </p>
+            <p>
+              Elements- Elements run from the start of a tag, to the end of the tag. It can contain strings, content, numbers, images,and etc in between the tags.
+            </p>
+            <p>
+              Another thing to note about tabs is that they can have attributes, and values. For example, (div class="title") , where <b>"class"</b>is the attribute and <b>"title"</b> is the value.
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title"> 
+        Developer Tools
+        </div>
+          <div class="text">
+            <p>
+            You can use the developer tool in chrome to look behind the scenes into the html of a webpage.  You can see that the page has a tree structure, which allows you to dig deep into the elements hiding behind the arrows.  Selecting an element can also reveal its CSS on the right side.  The info can be used to scan the style of the page.
+            </p>
+          </div>
+      </div>
+    </div>
+    <br>
+    <div class="lesson"> 
+      <h2> Lesson 3: Adding CSS Style and Structure 
+      </h2>  
+         <div class="lesson_box">
+            <br>
+            <div class="lesson_title">
+            Avoid Repitition - Save time and a headache!
+            </div>
+            <div class="text">
+              <p> 
+              Avoiding repetition can save a ton of time and headache! It will help you make good code.  When you are coding, you want to be as efficient as possible.  It would probably be a good idea to take the lazy mans approach, and try to make things as simple as possible.  This will also help with debugging code and even help save headaches for others!
+              </p>
+            </div>
+        </div>
+        <div class="lesson_box">
+          <br>
+            <div class="lesson_title">
+            CSS Style
+            </div>
+            <div class="text">
+              <p>
+              CSS is code written to control the style of HTML.  With CSS, The <b>most specific</b> rule is applied to every element. You can have serveral CSS Sheets to will be in reference to html.  To link the style sheet to your html, You'll need to add a link to the style file between the head tags.
+              You can use selectors to target the elements that are assigned to a class / id attribute in HTML. 
+              </p>
+            </div>
+        </div>
+        <div class="lesson_box">
+          <br>
+            <div class="lesson_title">
+            Boxes
+            </div>
+            <div class="text">
+              <p>
+              One should look at a page, and think about boxes.  Web pages are all about boxes.  There are boxes for images, links, headers, footers, sections, text, subtexts, etc.  When planning out your webpage, try to visualize how you would like to set it up by using boxes.  You can use div to plan out the sections.  You can use the class attributes to group and organize the code, and call them out easier with CSS.  Remember, Everything is actually a <b>BOX</b> in a website!
+              </p>
+              <p>
+                Within the box model, there is a margin, border, padding, and the content.
+
+                Margin - this clears area around the border, transparent, space between boxes, no BG color.
+                Border - goes around the padding and content. 
+                Padding - The Padding clears an area around the content. Affected by bg color of box 
+                Content - image or text apprearing on the site , the nucleus
+              </p>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+<div class="section"> <!-- Section 2 -->
+  <div class="lesson"> 
+    <h2>
+      Alex's Section 2: Programming
+    </h2>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+          Programming Notes:
+        </div>
+          <div class="text">
+            <p>
+              A computer is a machine that can execute a program. With the right program, a computer can do any mechanical computation you can imagine.
+              A program describes a very precise sequence of steps. Since the computer is just a machine, the program must give the steps in a way that can be executed mechanically. That is, the program can be followed without any thought.
+              A programming language is a language designed for producing computer programs. A good programming language makes it easy for humans to read and write programs that can be executed by a computer.
+            </p>
+            <p>
+              Python is a programming language. The programs that we write in the Python language will be the input to the Python interpreter, which is a program that runs on the computer. The Python interpreter reads our programs and executes them by following the rules of the Python language.
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+          Grammar:
+        </div>
+          <div class="text">
+            <p>
+              Compared to a natural language, programming languages adhere to a strict grammatical structure. In English, even if a phrase is written or spoken incorrectly, it can still be understood with the help of context or other cues. On the other hand, in a programming language like Python, the code must match the language grammar exactly. The Python interpreter has no idea what to do with input that is not in the Python language, so it produces an error.
+            </p>
+            <p>
+              When programming language grammar is not followed the interpreter will return a SyntaxError message. This means that the structure of the code is inconsistent with the rules of the programming language.
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+          Variables:
+        </div>
+          <div class="text">
+            <p>
+              Variables make programs easy to understand.  They can also use the same expression changing values of variables to compute different things. To assign variables, you'll need to create a 'name' and assign its 'value or expression' after placing an equal sign. (e.g. name = expression).  Basically in a program you want to assign a name and its value. When you "print" a variables name, it will generate its value.
+            </p>
+            <p>
+              Variables can vary.  = signs means assignment.ar:
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         Comments (#):
+        </div>
+          <div class="text">
+            <p>
+              For comments, use hashtag #.  The python interpreter will ignore this line.  Commenting is used to help leave notes on code, which will help you in the future to remember how things were laid out, or even help others understand your code.
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         Expressions:
+        </div>
+          <div class="text">
+            <p>     
+            Expressions are one of the most basic instructions for a computer. The expression is made up of values and operators that evaluate down to single values.  A single value can also be called an expression.
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         Data Types:
+        </div>
+          <div class="text">
+            <p>     
+            A data type is a category for values. There are 3 different data types.  
+            1. Integers (1,3,-100) <br>
+            2. Floating-point numbers (3.5, -6.73, 20.8889), and <br>
+            3. Strings ("words or characters inbetween commas", "string", 'busy', 'example').
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         Assignment Statements:
+        </div>
+          <div class="text">
+            <p>     
+            Assignment Statments are variables, or inputs that are stored.  It consists a variable name, and equal sign = (assignment operator) and value (which is to be stored as the variable name. 
+            <br>
+            <br>
+            Office = Stapler 
+            <br>
+            # Its like placing an item (stapler) in a box and labeling the box (office)
+            </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+{% endblock %}

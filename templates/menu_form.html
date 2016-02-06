@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+<h1>  Please Fill out the form to enter in a new recipe into the database!
+</h1>
+
+<h5 style = "color:#F44336"; "font-size:200%";"text-align:center;"> {{ error }} </h5>
+<form  class="post_form" action="/menu_form" method ="post">
+    <label class = "form_title"> Please Select a Food Truck
+    </label>
+    <br>
+    <br>
+    <select name = "truck_name">
+      <option selected="selected">Please select ...</option>
+      <option value="The Farm Box"> The Farm Box </option>
+      <option value="Old World"> Old World </option>
+      <option value="Bubba Bing"> Bubba Bing </option>
+      <option value="NY Delhi"> NY Delhi </option>
+      <option value="Mobile Masala"> Mobile Masala </option>
+      <option value="El Cubanito"> El Cubanito </option>
+      <option value="Ghee on The Go"> Ghee on The Go </option>
+      <option value="Adobo A-gogo"> Adobo A-gogo </option>
+      <option value="Casera"> Casera </option>
+      <option value="County Line"> County Line </option>
+      <option value="Jalan Jalan"> Jalan Jalan </option>
+      <option value="Mise En Place"> Mise En Place </option>
+      <option value="Koko's"> Koko's </option>
+      <option value="Miko Miko"> Miko Miko </option>
+      <option value="Taco Titans"> Taco Titans </option>
+      <option value="Coffee Truck"> Coffee Truck </option>
+      <option value="Khao and Chicken"> Khao and Chicken  </option>
+      <option value="320"> 320 </option>
+      <option value="321"> 321 </option>
+    </select>
+    <br>
+    <br>
+      <label class = "form_title">Please enter the recipe/dish name: </label>
+    <br>
+       <input type="text" name="recipe_name"><br>  
+    <br>
+      <label class = "form_title">Please select service type: </label>
+    <br>
+    <br>
+    <select name = "service_type">
+      <option selected="selected">Please select ...</option>
+      <option value="breakfast"> Breakfast </option>
+      <option value="breakfast/lunch"> Breakfast and Lunch </option>
+      <option value="lunch/dinner"> Lunch or Dinner </option>
+      <option value="drinks"> Drinks </option> 
+    </select>      
+    <br>
+    <br>
+    
+    <br>
+      <label class = "form_title">Ingredient List : 
+      </label>
+    <br>
+      <textarea rows="5" cols="25" wrap="hard" name="ingredient_list">
+      Please enter ingredients here...
+      </textarea>
+    <br>
+    
+    <br>
+      <label class = "form_title"> Chef / Prep Notes : 
+      </label>
+    <br>
+      <textarea rows="5" cols="25" wrap="hard" name="chef_notes">
+      Please enter plate notes here...
+      </textarea>
+    <br>
+    
+    <br>
+      <label class = "form_title"> Pack List : 
+      </label>
+    <br>
+      <textarea rows="5" cols="25" wrap="hard" name="pack_list">
+        Enter pack list info here...
+      </textarea>
+    <br>
+    
+    <br>
+     <label class = "form_title"> Allergens :
+     </label>
+    <br>
+      <textarea rows="5" cols="25" wrap="hard" name="allergens">
+        Enter all allergens here...
+      </textarea>
+    <br>
+
+    <br>
+      <label class = "form_title">Plating Instructions - Portion Sizing </label>
+      <br>
+       <textarea rows="5" cols="25" wrap="hard" name="plating">
+        Enter portion and plating info here
+      </textarea><br>  
+    <br>
+    
+    <br>
+      <label class = "form_title">Picture Link: </label>
+      <br>
+       <input type="text" name="picture_link"><br>  
+    <br>
+
+    <br>
+      <label class = "form_title">Document Link: </label>
+      <br>
+       <input type="text" name="doc_link"><br>  
+    <br>
+    
+    <br>
+      <label class = "form_title">Video Link: </label>
+      <br>
+       <input type="text" name="video_link"><br>  
+    <br>
+    <br>  
+
+
+
+    <input type="submit" value="Submit">  
+</form>
+
+{% endblock %}

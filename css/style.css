@@ -1,0 +1,231 @@
+/* MY FIRST real CSS code!! */
+
+.nickname{
+  margin: 2%;
+  font-style: italic;
+  color: #A8A8A8;
+  font-size:100%;
+}
+h1{
+  background-color: #18FFFF;
+  text-align: center;
+  font-family: Verdana;
+  padding: 2%;
+  margin: 5%;
+  border-radius: 35%;
+}
+h3{
+  background-color: #E91E63;
+  text-align: left;
+  font-family: Verdana;
+  padding: 1%;
+  margin: 3%;
+  border-radius:15%;
+  font-size:155%;
+}
+h5{
+  text-align: left;
+  font-family: Verdana;
+  padding: 1%;
+  margin: 3%;
+  border-radius:15%;
+  font-size:155%;
+}
+body{
+  padding: 5% 10%; 
+  font-family: Trebuchet MS;
+  font-size: 100%;
+  max-width: 75%;
+}
+p {
+  margin: 5%;
+  padding: 10px;  
+}
+.lesson{
+  background-color: #9C27B0;
+  color: white;
+  border-radius: 18px;
+  padding: 7px;
+}
+.lesson_box{
+  background: #2196F3;
+  border-radius: 18px;
+  margin: 10px;  
+}
+.lesson_title{
+  font-size: 110%;
+  padding: 3%;
+  margin: 8px;
+  font-family: "permanent marker";
+  color: #F50057;
+  background-color:white;
+  border-radius: 85px;
+  }
+h2{
+  text-align: center;
+  background-color:#C6FF00;
+  color: #009ACD;
+  font-weight: normal;
+  font-family: "permanent marker";
+  border-radius: 18px;
+  margin:10px;
+  }
+li {
+  font-size: 110%;
+  font-family: Verdana;
+  text-align:left;
+  line-height: 40px;
+  color: purple;
+}
+.text{
+  padding: 3%;
+}
+header{
+  text-align:right;
+  font-family: Verdana;
+  font-weight: bold;
+  padding: 2px; 
+}
+.name{
+  margin: 2%;
+  font-size: 130%;
+  color: #6B6B6B; 
+}
+.navlink{
+  text-align:center;
+  font-weight: bold;
+  padding: 8px;
+  color: #009ACD;
+  font-family: "permanent marker";
+  border-radius: 10px;
+  margin:10px;
+  font-size: 110%;
+  
+}
+.mainlinks{
+  text-align: center;
+  background-color:#CD1076;
+  color: #A8A8A8;
+  font-weight: normal;
+  font-family: "permanent marker";
+  border-radius: 18px;
+  margin:10px;
+}
+
+input    {
+width:375px;
+display:block;
+border: 1px solid #999;
+height: 25px;
+-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}  /* The code shown above selects all of the text input areas, and styles them to be 375px wide, and setting the display to block stacks them vertically. Adding a 1px border helps to emphasize each input area, and setting the height to 25px gives the user plenty of room visually to enter their text.
+
+http://www.sitepoint.com/style-web-forms-css/
+*/
+
+.post_form    {
+  background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+  background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  margin:auto;
+  position:relative;
+  width:550px;
+  height:1380px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 20px;
+  font-weight: bold;
+  color: #09C;
+  text-decoration: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding:10px;
+  border: 1px solid #999;
+  border: inset 1px solid #333;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}  
+
+/* The code above can look like a mouthful, but it is fairly simple when broken down. Flat colors can be really boring, so adding a slight gradient can break up the monotony and give your design some dimension. That is done with the background style. When using this property and gradients, you have to include the specific prefixes for certain browsers such as FireFox, or they won’t show up. Both are saying the same thing. Create a linear gradient, start from the bottom, and use a medium gray and a light gray and blend it over 175px.
+
+Since this is where you entire form is going to be contained, I decided to center the form in the browser by setting margin to auto. Setting the Position to Relative is intended for aligning an element later, so that explanation is to come. I specified the width and the height of the form, the fonts used, and styled it to be bold, italic,  14px in size and a line height (spacing between each line of text) of 24px.
+
+Border radius gives us rounded corners for our boxes, but just like with gradients, you have to specify the prefix for each browser. Increase the number for more rounded corners. Padding gives some space between the text and the edge of the form, so that your text doesn’t run outside the bounds of your form and its rounded corners.
+
+You can create subtle borders for contrast and dimension. I also added box shadows to the overall form, so if this becomes a popup form, it will add dimension and make the form look like it is floating over the rest of the site. This is a popular technique right now. This is yet another style that needs you to specify the proper prefix in order to get it to show up */
+
+.get_form    {
+  background: -webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+  background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  margin:auto;
+  position:relative;
+  width:650px;
+  height:250px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: bold;
+  color: #09C;
+  text-decoration: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding:10px;
+  border: 1px solid #999;
+  border: inset 1px solid #333;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+input.button {
+width:50px;
+position:absolute;
+right:20px;
+bottom:20px;
+background:#09C;
+color:#fff;
+font-family: Tahoma, Geneva, sans-serif;
+height:30px;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+border: 1p solid #999;
+}
+
+input.button:hover {
+background:#ddd;
+color:#09C;
+}  /* We select the button named submit and  define its width to 100px and set its position to absolute. As we mentioned earlier, we had styled the form to have a relative position. The way this works is that when you set something to have a absolute position, it looks for the last element that has its position set to relative. If that element is nested inside of the element with a position of relative, its absolute position is relative to that element. In other words, the submit button will be positioned somewhere inside of the bounds of the form container. I defined that it will be 20px from the right and from the bottom with those respective styles.
+
+I set the background to blue and the text to white. I gave it a definite height of 30px and rounded corners. I also have it a 1px gray border. This is the normal state for your submit button.
+
+You will notice that I defined a hover state for the submit button. The styles defined here override the original styling once the user hovers over the button. I changed the background to white and the text to blue, giving the user a highly contrasting effect when they mouse over the button. */
+
+textarea:focus, input:focus {
+border: 3px solid #09C;
+} /* What this does is it tells the browser that if a person has a text input or text area selected, that it needs to add a 3px blue border around the active input area, so the user knows where they are visually in the form. This is just a little extra something that is much appreciated by many users. */
+
+textarea    {
+width:375px;
+display:block;
+border: 1px solid #999;
+height: 75px;
+-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+th    {
+display:block;
+font-family: Alegreya;
+font-size:155%;
+font-style: bold;
+
+}

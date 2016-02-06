@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
+<div class="section"> <!-- Section 4 -->
+  <div class="lesson"> 
+    <h2>
+      Alex's Section 4: Allow Comments
+    </h2>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+          Servers:
+        </div>
+          <div class="text">
+            <p>
+              The Servers purpose: Respond to HTTP requests. <br><br>
+              <br> 1. static content: prewritten file (image,) <br><br>
+              <br> 2. dynamic content: response is built on the fly, by web applications. Web apps are programs that generate content. Web Apps live on webservers, speaks http, and generates content that browsers request.
+            </p>
+            <p>
+              http = is the protocol used on the world wide web.  Hyper Text Transfer Protocol, used to talk to the servers.<br><br>
+
+              GET/foo http/1.1  - request line<br>           
+
+              3 main parts to request line =<br><br>
+
+              1. method<br>
+              2. path<br>
+              3. version<br><br>
+
+              method (get, post,etc) , path (ex /foo - actuall document requesting from server) - used for making request, last is version (version of HTTP). <br>
+
+              for path, no need to use fragment and beyond (#)...<br><br>
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         Forms:
+        </div>
+          <div class="text">
+            <p>
+              type = "password"  # creates text box with dots on entry, for passwords  // not sent securely over the http though.. only used to protect viewers. <br><br>
+
+              type = "checkbox"  // q parameter = "on" when checked (q=on), or shows no parameter when it is unchecked. <br><br>
+
+              type = "submit"  // creates a submit box, when pressed also like pressing enter... will submit data. <br><br>
+
+              type = "radio"  // creates radio button , if the name is all the same, it will only allow you to select 1 button. <br><br>
+
+              value = ""  //assigns value to the name <br><br>
+
+              Example format: <br> <br>
+              &lt;input type = "radio" name = "q" value = "3"&gt;  
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         GET and POST:
+        </div>
+          <div class="text">
+            <p>     
+            How GET requests and POST requests differ. <br><br>
+
+            <b>GET - for fetching docs </b>
+            <br>
+            <br>
+            1. parameters in URL <br>
+            2. used for fetching documents <br>
+            3. maximum URL length <br>
+            4. Ok to cache <br>
+            5. shouldn't change the server <br>
+            <br>
+
+            <b>POST - used for making updates to server </b> (can be destructive in nature) <br><br>
+            1. parameters in body <br>
+            2. used for updating data <br>
+            3. no max length <br>
+            4. not ok to cache  (industry standard, don't cache post requests) <br>
+            5. ok to change the server <br> <br>
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         Validation:
+        </div>
+          <div class="text">
+            <p>     
+              Make sure to always validate your parameters.  Servers can receive junk, and it can take up resources to process the junk.  Validating parameters prevents this. 
+              <br>
+              <br>
+              <br> 
+
+              Always verify data on the backend.  Verify what the users enter and complain if the data is bad.
+              <br>
+              <br>
+              <br>
+
+              You   &lt;---------------&gt;    Server
+              <br>
+              <br>
+              <br>
+
+              1. GET form  --&gt;  # make a get request to server
+              <br>
+              <br>
+              2. &lt;--- form data # server sends form data back to user
+              <br>
+              <br>
+              3. Post form -- &gt; # make a post request to server with data
+              <br>
+              <br>
+
+              4. Server will run validation functions. If data is good, server will say thanks!  If data is bad, server will respond with form data again, send error message to re-enter values.  Circles back to #3 Post form.
+              <br>
+              <br>
+              Verify if the users input, on error render the form again, and include an error message.  Validation improves user experience by letting the user know when the data input is bad.  When the data is bad, it will send an an error message and reload the form, and if it's good, it should have a redirect message indicating a successful input.<br>
+              <br>
+
+              A redirect helps so that reloading a page doesn't resubmit the form, and so we can also have distinct pages for forms, and success pages.  You can make a "Thanks handler", and a new "Thanks.html" URL and also initialize a redirect to the /thanks URL.  You can use self.redirect("/path"), then make sure to add to the mapping.
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         HTML Escaping:
+        </div>
+          <div class="text">
+            <p>     
+            HTML escaping allows you to escape or leave out certain characters like "", &lt; &gt;, &amp; - so the forms don't get busted up.
+            <br>
+            <br>  
+
+            For " use -->  &amp;quot;
+            <br>
+            For > use --> &amp;gt;
+            <br>
+            For &lt; use --> &amp;lt;
+            <br>
+            For &amp; use --> &amp;mp; 
+            <br>
+            <br>
+            Helpful TIPS - 
+            <br>
+            <br>
+
+            1. Always automatically escape variables when possible - not every template language will do so, but always check.
+            <br>
+            2. minimize code in templates - makes it difficult to modify, debug.
+            <br>
+            3. minimize html in code - put it in a template.
+            <br>
+            
+            </p>
+          </div>
+      </div>
+      <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         *args and **kwargs:
+        </div>
+          <div class="text">
+            <p>     
+            *a - args
+            **kw - kwargs
+
+            *args will unpack lists or tuples - an ordered datastructure that you can index by number that goes in order. Orders are consistent.
+            <br>
+            <br>
+
+            **kwargs unpack dictionaries - used for things that have key value sets... the key is the parameter, and value is what it will take in. {"parameter 1":" value 1"} 
+            <br>
+            <br>
+            Putting *args and/or **kwargs as the last items in your function definition’s argument list allows that function to accept an arbitrary number of arguments and/or keyword arguments.
+
+            ```
+            Python
+            def some_function(param1, param2):
+              print param1, param2
+
+            some_dict = {"param1" : "parameter1", "param2":"parameter2"}
+
+            some_function(**some_dict)
+
+            some_function(*[1,2])
+
+            ```
+            <br>
+            
+            </p>
+          </div>
+      </div>
+       <div class="lesson_box">
+        <br>
+        <div class="lesson_title">
+         HTTP Responses and Making Requests
+        </div>
+          <div class="text">
+            <p>     
+            Making Requests   - <br>
+            Headers = Name: value (name, semicolon, value)<br>
+            When you make a http request, all of the below (1-3) is sent at once.  Request line, Host, user-agent.<br><br><br>
+
+            (1) GET /foo?p=1 HTTP/1.1  <-- request line<br><br>
+            (2) host: www.example.com <-- which website we are requesting the document for, required for http/1.1.  one server can host many websites, so we need to say what website we are requesting the document for.<br><br>
+            (3) user-agent:chrome v.17 <--- this header is describing what or who is making the request... in this case its the browser, knows what type of machine is making the request.<br><br><br>
+
+            ################################
+            ###  Http responses    #########
+            ################################
+
+            <br><br>
+
+
+            browser sends request, server responds with a response.
+            <br><br>
+
+            basic http response looks like:<br>
+            status line - HTTP/1.1 200 OK
+            <br><br>   
+
+            Status Codes:<br>
+            200 = 200 is ok<br>
+            300 = is found/somewhere else<br>
+            404 = not found<br>
+            500 = server error<br><br>
+
+            Status code is from 1,2 everything ok,3 document is located somewhere else - we need to do something technical to find the document,4 error on browser side,5 error on server side, broke handling this request.<br><br>
+
+            http response headers:<br>
+            1. Date - here all the time, when the request happens<br><br>
+
+            2. Server: name and version of the server that's handling the response... NEVER INCLUDE THIS, don't give free information to a would be hacker.<br><br>
+
+            3. Content-type : type of document being returned. tells browser what to display, how to display.  (if image, shows image, etc.)<br><br>
+
+            4. Content-length : How long the document is.  tells when browser is done sending data.  Often included, but not required.  A way to tell browser is done sending data.<br>
+            <br>
+            
+            </p>
+          </div>
+      </div>
+  </div>
+</div>
+
+{% endblock %}
